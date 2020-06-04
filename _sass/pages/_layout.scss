@@ -17,6 +17,12 @@
     width: 100%;
   }
 }
+.cover.dark-mode {
+  background-color: #212121;
+}
+span.dark-mode {
+  color: $white
+}
 .cover-card {
   color: $text-color;
   padding: 0 30px;
@@ -52,6 +58,30 @@
     margin: 0 auto;
     padding: 0 0px 80px;
   }
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(
+    left,
+    #f0f0f0,
+    #333333,
+    #f0f0f0
+  );
+  background-image: -moz-linear-gradient(left, #f0f0f0, #333333, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #333333, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #333333, #f0f0f0);
+}
+hr.dark-mode {
+  background-image: -webkit-linear-gradient(
+    left,
+    #333333,
+    #f0f0f0,
+    #333333
+  );
+  background-image: -moz-linear-gradient(left, #333333, #f0f0f0, #333333);
+  background-image: -ms-linear-gradient(left, #333333, #f0f0f0, #333333);
+  background-image: -o-linear-gradient(left, #333333, #f0f0f0, #333333);
 }
 .social-links {
   margin-top: 0.5em;
@@ -96,5 +126,8 @@
         color: lighten($secondary, 14%);
       }
     }
+  }
+  .nav-item.dark-mode {
+    color: $white;
   }
 }

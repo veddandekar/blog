@@ -111,6 +111,9 @@ footer {
     text-shadow: 0 0 5px $white, 0 0 10px $danger;
   }
 }
+footer.dark-mode {
+  color: $white;
+}
 .related-articles {
   margin-top: 2em;
   h4 {

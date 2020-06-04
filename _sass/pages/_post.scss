@@ -6,8 +6,30 @@
   z-index: 233;
   width: 100%;
   padding: 20px 20px 0;
-  -webkit-transform: translate3d(0,0,1px);
-  transform: translate3d(0,0,1px);
+  -webkit-transform: translate3d(0, 0, 1px);
+  transform: translate3d(0, 0, 1px);
+  @include media-query($small-screen) {
+    padding: 50px 30px 0;
+  }
+  @include media-query($medium-screen) {
+    height: 100vh;
+    overflow-y: scroll;
+    position: initial;
+    top: 0;
+  }
+}
+.post.dark-mode {
+  color: $white;
+}
+.post-listing.dark-mode {
+  background-color: #121212;
+  position: absolute;
+  top: 400px;
+  z-index: 233;
+  width: 100%;
+  padding: 20px 20px 0;
+  -webkit-transform: translate3d(0, 0, 1px);
+  transform: translate3d(0, 0, 1px);
   @include media-query($small-screen) {
     padding: 50px 30px 0;
   }
@@ -30,7 +52,7 @@
 
 
 section.post {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -44,19 +66,22 @@ section.post {
   padding: 0.5em 1em;
 }
 
-
-.post-title {
-
+.post-title-link {
+  color: $primary;
+  font-size: 14px;
+  margin-left: 10px;
+  &:hover,
+  &:focus {
+    color: lighten($primary, 14%);
+  }
 }
 
-.post-title-link {
-	color: $primary;
-	font-size: 14px;
-	margin-left: 10px;
-	&:hover,
-	&:focus {
-		color: lighten($primary, 14%);
-	}
+.gist .gist-data {
+  height: 400px;
+  overflow-y: auto;
+}
+.gist .gist-meta {
+  display: none;
 }
 
 .post-description {
@@ -80,9 +105,9 @@ section.post {
 		color: $warning;
 	}
   .post-cat {
-		text-transform: uppercase;
-		color: $warning;
-	}
+    text-transform: uppercase;
+    color: $warning;
+  }
   .read-time {
     color: $primary;
   }
@@ -103,6 +128,9 @@ a.read-more {
   font-family: $font-family-post;
   .post-header {
     margin: 0 auto 50px;
+  }
+  .post-header.dark-mode {
+    color: $white
   }
   @include media-query($medium-screen) {
     width: 80%
