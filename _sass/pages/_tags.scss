@@ -33,6 +33,16 @@ ul.tag-cloud {
       }
     }
   }
+
+  &.dark-mode {
+    a {
+      color: $white;
+      &:hover,
+        &:focus {
+          color: lighten($white, 24%);
+        }
+    }
+  }
 }
 
 .cat-list {

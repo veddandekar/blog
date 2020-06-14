@@ -145,7 +145,7 @@ The /proc directory in a Linux System, according to me is the coolest directory 
 
 The /proc directory has a lot of folders, each corresponding to a individual process. Here's mine:
 <div>
-<pre><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>~</b></font> ls /proc
+<pre id="inline-code" class="dark-mode"><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>~</b></font> ls /proc
 <font color="#3465A4"><b>1</b></font>     <font color="#3465A4"><b>1094</b></font>   <font color="#3465A4"><b>13</b></font>    <font color="#3465A4"><b>1408</b></font>  <font color="#3465A4"><b>1590</b></font>  <font color="#3465A4"><b>166</b></font>    <font color="#3465A4"><b>177</b></font>    <font color="#3465A4"><b>1834</b></font>   <font color="#3465A4"><b>20</b></font>     <font color="#3465A4"><b>2192</b></font>   <font color="#3465A4"><b>1095</b></font>  <font color="#3465A4"><b>2401</b></font>   <font color="#3465A4"><b>26752</b></font>  <font color="#3465A4"><b>281</b></font>    <font color="#3465A4"><b>28904</b></font>  <font color="#3465A4"><b>3125</b></font>  <font color="#3465A4"><b>3834</b></font>  <font color="#3465A4"><b>48</b></font>    <font color="#3465A4"><b>54</b></font>    <font color="#3465A4"><b>60</b></font>   <font color="#3465A4"><b>acpi</b></font>         iomem        mtrr           <font color="#3465A4"><b>tty</b></font>
 <font color="#3465A4"><b>10</b></font>    <font color="#3465A4"><b><mark>32612</mark></b></font>   <font color="#3465A4"><b>1300</b></font>  <font color="#3465A4"><b>1440</b></font>  <font color="#3465A4"><b>1592</b></font>  <font color="#3465A4"><b>167</b></font>    <font color="#3465A4"><b>1773</b></font>   <font color="#3465A4"><b>18369</b></font>  <font color="#3465A4"><b>202</b></font>    <font color="#3465A4"><b>21921</b></font>  <font color="#3465A4"><b>2347</b></font>  <font color="#3465A4"><b>2405</b></font>   <font color="#3465A4"><b>26963</b></font>  <font color="#3465A4"><b>282</b></font>    <font color="#3465A4"><b>28955</b></font>  <font color="#3465A4"><b>3165</b></font>  <font color="#3465A4"><b>39</b></font>    <font color="#3465A4"><b>4856</b></font>  <font color="#3465A4"><b>5402</b></font>  <font color="#3465A4"><b>622</b></font>  <font color="#3465A4"><b>asound</b></font>       ioports      <font color="#06989A"><b>net</b></font>            uptime
 <font color="#3465A4"><b>1055</b></font>  <font color="#3465A4"><b>1097</b></font>   <font color="#3465A4"><b>1302</b></font>  <font color="#3465A4"><b>1445</b></font>  <font color="#3465A4"><b>1594</b></font>  <font color="#3465A4"><b>16715</b></font>  <font color="#3465A4"><b>1776</b></font>   <font color="#3465A4"><b>18399</b></font>  <font color="#3465A4"><b>2056</b></font>   <font color="#3465A4"><b>21927</b></font>  <font color="#3465A4"><b>2348</b></font>  <font color="#3465A4"><b>2425</b></font>   <font color="#3465A4"><b>27</b></font>     <font color="#3465A4"><b>283</b></font>    <font color="#3465A4"><b>29</b></font>     <font color="#3465A4"><b>3171</b></font>  <font color="#3465A4"><b>4</b></font>     <font color="#3465A4"><b>50</b></font>    <font color="#3465A4"><b>559</b></font>   <font color="#3465A4"><b>63</b></font>   buddyinfo    <font color="#3465A4"><b>irq</b></font>          pagetypeinfo   version
@@ -168,7 +168,7 @@ The /proc directory has a lot of folders, each corresponding to a individual pro
 </div>
 Each item listed in a dark blue colour is a folder, and the name corresponds to the PID of the process. Now we know the process ID of our process is `32612`, so lets peek inside that folder. 
 <div>
-<pre><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>32612</b></font> ls
+<pre id="inline-code" class="dark-mode"><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>32612</b></font> ls
 arch_status      environ    mountinfo      personality   statm
 <font color="#3465A4"><b>attr</b></font>             <font color="#06989A"><b>exe</b></font>        mounts         projid_map    status
 autogroup        <font color="#3465A4"><b>fd</b></font>         mountstats     <font color="#06989A"><b>root</b></font>          syscall
@@ -197,7 +197,7 @@ From `man proc` (Basically a manual page)
 ```
 
 Okay, fancy stuff aside. Let's take a look at what my maps file looks like.
-<pre><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>~</b></font> cat /proc/32612/maps
+<pre id="inline-code" class="dark-mode"><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>~</b></font> cat /proc/32612/maps
 558bfe5ca000-558bfe5cb000 r--p 00000000 08:04 1705261                    /home/yash/git_projects/blog/a.out
 558bfe5cb000-558bfe5cc000 r-xp 00001000 08:04 1705261                    /home/yash/git_projects/blog/a.out
 558bfe5cc000-558bfe5cd000 r--p 00002000 08:04 1705261                    /home/yash/git_projects/blog/a.out
@@ -341,7 +341,7 @@ while maps_file_line:
 
 So I run my program as
 
-<pre><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>~</b></font> sudo python3 script.py 32612 ThisIsAGoodStArt ThisIsAmazing
+<pre id="inline-code" class="dark-mode"><font color="#4E9A06"><b>➜  </b></font><font color="#06989A"><b>~</b></font> sudo python3 script.py 32612 ThisIsAGoodStArt ThisIsAmazing
 * Found the heap
 * Address range:  558bfee29000-558bfee4a000
 * Permissions:  rw-p

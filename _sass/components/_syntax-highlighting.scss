@@ -16,6 +16,10 @@ code {
   white-space: nowrap;
 }
 
+.dark-mode code {
+  background-color: #212121;
+}
+
 
 pre { 
   overflow: auto;
@@ -38,6 +42,7 @@ pre code {
     word-break: break-all;
   }
 }
+
 .highlight {
   margin: 0;
   pre {

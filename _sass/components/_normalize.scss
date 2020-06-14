@@ -48,6 +48,15 @@ summary {
 
 article.dark-mode {
   color: $white;
+  pre {
+    background-color: #212121;
+    code {
+      color: #cdcdcd;
+      .mi {
+        color: #cdcdcd;
+      }
+    }
+  }
 }
 
 /**

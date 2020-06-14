@@ -65,7 +65,7 @@ h1 a.dark-mode, h2 a.dark-mode, h3 a.dark-mode, h4 a.dark-mode, h5 a.dark-mode, 
   color: $white;
   &:hover,
   &:focus {
-    color: lighten($text-color, 24%);
+    color: lighten($text-color-dark, 40%);
   }
 }
 h1 { font-size: $font-size-h1; margin: ($font-size-h1 / 2) 0 ($font-size-h1 / 2.5) 0;}
